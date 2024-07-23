@@ -92,7 +92,7 @@ deploy_vless() {
 # 启动pm2 vless进程
 start_pm2_vless_process() {
     echo "正在启动pm2 vless进程..."
-    ~/.npm-global/bin/pm2 start ~/domains/$USER.serv00.net/vless/app.js --name vless
+    cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh
     echo -e "${GREEN}pm2 vless进程已启动。${NC}"
 }
 # 检查vless的状态
