@@ -1,8 +1,8 @@
-name: 恢复vless服务并发送Telegram消息
+name: Restore Vless服务
 
 on:
   schedule:
-    - cron: '*/180 * * * *'  # 每180分钟执行一次
+    - cron: '*/300 * * * *'  # 每300分钟执行一次
   workflow_dispatch:
 
 jobs:
