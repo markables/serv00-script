@@ -110,7 +110,7 @@ check_vless_status() {
 check_pm2_vless_snapshot() {
     if [[ -f ~/.pm2/dump.pm2 ]]; then
         echo "检测到pm2 vless快照，正在恢复..."
-        cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh
+        /home/$USER/.npm-global/bin/pm2 resurrect
         echo -e "${GREEN}pm2 vless快照已恢复。${NC}"
         check_vless_status
     else
